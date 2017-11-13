@@ -1477,9 +1477,12 @@ Query parameter | Type   | Description
 ----------------|--------|------------
 concept         | Number | The identifier for the location's concept. Must be unique within the company, contact HotSchedules if you're not sure about this value.
 storeNum        | Number | Numeric (integer) identifier for the store. Must be unique within the concept.
-Day             | Number | Day formatted dd
-Month           | Number | Month formatted mm
-Year            | Number | Year formated yyyy
+start_day             | Number          | Day formatted dd
+start_month           | Number          | Month formatted mm
+start_year            | Number          | Year formated yyyy
+end_day             | Number          | Day formatted dd
+end_month           | Number          | Month formatted mm
+end_year            | Number          | Year formated yyyy
 
   `curl -X PUT -H "Content-Type:application/json" -u <username>:<password> "https://api.hotschedules.io/<namespace>/controllers/vertx/hotschedules/<concept>/<storeNum>/setEmpJobs?start_day=30&start_month=4&start_year=2016&end_day=5&end_month=5&end_year=2016" -d "[{json_object_1}, {json_object_2}, {json_object_3}...]"`
   
@@ -1523,9 +1526,12 @@ Query parameter | Type            | Description
 concept         | Number          | The identifier for the location's concept. Must be unique within the company, contact HotSchedules if you're not sure about this value.
 storeNum        | Number          | Numeric (integer) identifier for the store. Must be unique within the concept.
 emps            | wsEmployeeArray | Array of WSEmployee objects. Each object represents an employee at this store.
-Day             | Number          | Day formatted dd
-Month           | Number          | Month formatted mm
-Year            | Number          | Year formated yyyy
+start_day             | Number          | Day formatted dd
+start_month           | Number          | Month formatted mm
+start_year            | Number          | Year formated yyyy
+end_day             | Number          | Day formatted dd
+end_month           | Number          | Month formatted mm
+end_year            | Number          | Year formated yyyy
 
   `curl -X PUT -H "Content-Type:application/json" -u <username>:<password> "https://api.hotschedules.io/<namespace>/controllers/vertx/hotschedules/<concept>/<storeNum>/setEmps?start_day=30&start_month=4&start_year=2016&end_day=5&end_month=5&end_year=2016" -d "[{json_object_1}, {json_object_2}, {json_object_3}...]"`
   
